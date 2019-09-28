@@ -19,6 +19,7 @@ import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/pi
 import { PiedraPapelTijeraListadoComponent } from './componentes/piedra-papel-tijera-listado/piedra-papel-tijera-listado.component';
 import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 import { RegistrarseComponent } from './componentes/registrarse/registrarse.component';
+import { MenuEncabezadoComponent } from './componentes/menu-encabezado/menu-encabezado.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RegistrarseComponent } from './componentes/registrarse/registrarse.comp
     PiedraPapelTijeraComponent,
     PiedraPapelTijeraListadoComponent,
     QuienSoyComponent,
-    RegistrarseComponent
+    RegistrarseComponent,
+    MenuEncabezadoComponent
   ],
   imports: [
     BrowserModule,
