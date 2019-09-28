@@ -1,0 +1,132 @@
+
+ <body style="background-image: url('/TP_LAV4_2017/assets/imagenes/poker.jpg')">
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+ <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#" [routerLink]="['/home']" >Menu principal</a>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" ><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <!-- <a class="nav-link" [routerLink]="['Adivina']">Adivina el numero</a> -->
+        <button type="button"  [routerLink]="['AdivinaListado']" class="btn btn-dark">Adivina el numero</button>
+      </li>
+       <li class="nav-item">
+       <a class="nav-link">|</a>
+      </li>
+      <li class="nav-item" [routerLink]="['AgilidadListado']">
+       <!-- <a class="nav-link" >Agilidad</a> -->
+        <button type="button" class="btn btn-success">Agilidad</button>
+      </li>
+       <li class="nav-item">
+       <a class="nav-link">|</a>
+      </li>
+       <li class="nav-item" [routerLink]="['Anagrama']">
+       <button type="button" class="btn btn-info">Anagrama</button>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link">|</a>
+      </li>
+       <li class="nav-item" [routerLink]="['PPTListado']">
+      <button type="button" class="btn btn-default">Piedra-Papel-Tijera</button>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">|</a>
+      </li>
+      <li class="nav-item" [routerLink]="['Mijuego']">
+        <!-- <a class="nav-link" >Mi Juego</a> -->
+        <button type="button" class="btn btn-danger">Mi Juego</button>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">|</a>
+      </li>
+      <li class="nav-item" [routerLink]="['Listado']">
+        <button type="button" class="btn btn-warning">Listado</button>
+      </li>
+      </ul>
+      </div>
+</nav>
+
+<div class="card-group card-inverse card-primary text-center">
+  <div class="card"  [routerLink]="['AdivinaListado']" style="background-color:darkorange   ;border-color:white; cursor:pointer; width: 50%">
+    <img class="card-img-top" src="./assets/imagenes/adivina.gif" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">Adivina el Numero</h4>
+     
+     <button type="button" class="btn btn-dark btn-lg btn-block">Entrar</button>
+    </div>
+  </div>
+  <div class="card" [routerLink]="['AgilidadListado']" style="background-color: darkorange; border-color:white;">
+   
+     <img class="card-img-top" src="./assets/imagenes/agilidad.gif" alt="Card image cap">
+    <div class="card-body">
+           <h4 class="card-title">Agilidad</h4>
+       <button type="button" class="btn btn-success btn-lg btn-block">Entrar</button>
+    </div>
+
+  </div>
+  <div class="card" [routerLink]="['Anagrama']" style="background-color:darkorange ; border-color: white;">
+  
+     <img class="card-img-top" src="./assets/imagenes/anagrama.gif" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">Anagrama</h4>
+      
+      <button type="button" class="btn btn-info btn-lg btn-block">Entrar</button>
+    </div>
+   
+  </div>
+    <div class="card" [routerLink]="['PPTListado']" style="background-color:darkorange ; border-color: white;">
+  
+     <img class="card-img-top" src="./assets/imagenes/PPT.gif" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">Piedra Papel Tijera</h4>
+    
+          <button type="button" class="btn btn-default btn-lg btn-block">Entrar</button>
+    </div>
+   
+  </div>
+    <div class="card" [routerLink]="['Mijuego']" style="background-color:darkorange ; border-color: white;">
+  
+     <img class="card-img-top" src="./assets/imagenes/snake.gif" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title">Snake</h4>
+     
+      <button type="button" class="btn btn-danger btn-lg btn-block">Entrar</button>
+    </div>
+   
+  </div>
+</div>
+
+
+
+
+
+<!--
+<div class="container">
+              
+  <table class="table table">
+ 
+    <tbody>
+      <tr>
+       <td><a class="play-btn" href="#"></a></td>
+        <td>Adivina</td>
+      </tr>
+      <tr>
+        <td><a class="play-btn" href="#"></a></td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td><a class="play-btn" href="#"></a></td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+-->
+
+
+<router-outlet></router-outlet>

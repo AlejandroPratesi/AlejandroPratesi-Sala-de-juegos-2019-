@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+import { JuegoAdivina} from '../../clases/juego-adivina';
+import { JuegoServiceService} from '../../servicios/juego-service.service';
 
 @Component({
   selector: 'app-adivina-el-numero',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdivinaElNumeroComponent implements OnInit {
 
-  constructor() { }
+
+  unJuego: JuegoAdivina;
+ enviarJuego: EventEmitter<any>=new EventEmitter<any>();
+
+
+  constructor(private miServicio?:JuegoServiceService) { }
+
+  generar()
+  {
+    this.unJuego = new JuegoAdivina("Adivina","Anonimo",true);
+    this.unJuego.GenerarNuevo();
+  }
+
+  verificar(){
+    this.unJuego.jugador = this.miServicio.retornarUsuario();
+   
+    if(this.unJuego.Verificar())
+      this.enviarJuego.emit(this.unJuego);
+    else
+      this.enviarJuego.emit(this.unJuego);
+  }
+
 
   ngOnInit() {
+
+    this.generar();
   }
 
 }

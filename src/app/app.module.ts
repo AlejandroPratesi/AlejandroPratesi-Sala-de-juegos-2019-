@@ -20,6 +20,10 @@ import { PiedraPapelTijeraListadoComponent } from './componentes/piedra-papel-ti
 import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 import { RegistrarseComponent } from './componentes/registrarse/registrarse.component';
 import { MenuEncabezadoComponent } from './componentes/menu-encabezado/menu-encabezado.component';
+import { JuegosComponent } from './componentes/juegos/juegos.component';
+import { ListadoDeResultadosComponent } from './componentes/listado-de-resultados/listado-de-resultados.component';
+import { ListadoComponent } from './componentes/listado/listado.component';
+import { AyudaComponent } from './componentes/ayuda/ayuda.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { MenuEncabezadoComponent } from './componentes/menu-encabezado/menu-enca
     PiedraPapelTijeraListadoComponent,
     QuienSoyComponent,
     RegistrarseComponent,
-    MenuEncabezadoComponent
+    MenuEncabezadoComponent,
+    JuegosComponent,
+    ListadoDeResultadosComponent,
+    ListadoComponent,
+    AyudaComponent
   ],
   imports: [
     BrowserModule,

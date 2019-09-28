@@ -5,6 +5,12 @@ import { LoginComponent } from './componentes/login/login.component';
 import { PaginaNoEncontradaComponent } from './componentes/pagina-no-encontrada/pagina-no-encontrada.component';
 import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 import { RegistrarseComponent } from './componentes/registrarse/registrarse.component';
+import { JuegosComponent } from './componentes/juegos/juegos.component';
+import { AdivinaElNumeroComponent } from './componentes/adivina-el-numero/adivina-el-numero.component';
+import { AdivinaElNumeroListadoComponent } from './componentes/adivina-el-numero-listado/adivina-el-numero-listado.component';
+import { PiedraPapelTijeraListadoComponent } from './componentes/piedra-papel-tijera-listado/piedra-papel-tijera-listado.component';
+import { AnagramaListadoComponent } from './componentes/anagrama-listado/anagrama-listado.component';
+import { AgilidadAritmeticaListadoComponent } from './componentes/agilidad-aritmetica-listado/agilidad-aritmetica-listado.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -12,6 +18,15 @@ const routes: Routes = [
   { path: 'registrarse', component: RegistrarseComponent },
   { path: 'quiensoy', component: QuienSoyComponent },
   { path: '404', component: PaginaNoEncontradaComponent },
+  { path: 'juegos', component: JuegosComponent,
+  children:
+  [ {path: 'AdivinaListado' , component: AdivinaElNumeroListadoComponent}, 
+    {path: 'PPTListado' , component: PiedraPapelTijeraListadoComponent },
+     {path: 'Anagrama' , component: AnagramaListadoComponent },
+    {path: 'AgilidadListado' , component: AgilidadAritmeticaListadoComponent }]
+   
+}, 
+
   { path: '',   redirectTo: '/Login', pathMatch: 'full' },
   { path: '**', component: PaginaNoEncontradaComponent }
 ];
