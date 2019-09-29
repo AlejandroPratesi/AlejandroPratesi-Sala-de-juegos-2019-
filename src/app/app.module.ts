@@ -25,6 +25,8 @@ import { ListadoDeResultadosComponent } from './componentes/listado-de-resultado
 import { ListadoComponent } from './componentes/listado/listado.component';
 import { AyudaComponent } from './componentes/ayuda/ayuda.component';
 
+import { JuegoServiceService } from './servicios/juego-service.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +54,7 @@ import { AyudaComponent } from './componentes/ayuda/ayuda.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [JuegoServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

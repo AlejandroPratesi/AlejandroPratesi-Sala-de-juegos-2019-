@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 @Component({
   selector: 'app-listado',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoComponent implements OnInit {
 
-  constructor() { }
+  public listadoParaCompartir: Array<any>;
+  unString: string;
+  data: any;
+
+  constructor(public servicioJuego: JuegoServiceService) { }
 
   ngOnInit() {
+    this.listadoParaCompartir = this.servicioJuego.inicializarLista();
   }
 
 }
