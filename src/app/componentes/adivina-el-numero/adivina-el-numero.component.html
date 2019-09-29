@@ -7,9 +7,9 @@
    <div class="col-sm-6">
      <div style="text-align:center">
  <div class="alert alert-dark" role="alert">
-   <h3>
+   <h2>
      <p class="font-italic font-weight-bold" > {{unJuego.nombre}}</p>
-   </h3>
+   </h2>
  </div>
 </div>
 <form name="juego">
@@ -17,11 +17,11 @@
   <input [(ngModel)]="unJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:100%"/>
    <h1>{{unJuego.numeroIngresado}}  </h1>
 
-   <h2 [hidden]="ocultarVerificar"><button  *ngIf="unJuego.numeroSecreto!=0" (click)="verificar()" class="btn btn-success btn-lg">Verificar</button></h2>
+   <h3 [hidden]="ocultarVerificar"><button  *ngIf="unJuego.numeroSecreto!=0" (click)="verificar()" class="btn btn-success btn-lg">Verificar</button></h3>
 
-   <h2><button *ngIf="unJuego.numeroSecreto==0 " (click)="generarnumero()"  class="btn btn-info btn-lg"> Nuevo número secreto</button></h2>
+   <h3><button *ngIf="unJuego.numeroSecreto==0 " (click)="generarnumero()"  class="btn btn-info btn-lg"> Nuevo número secreto</button></h3>
 
-   <h2><p *ngIf="unJuego.numeroSecreto!=0" ><i class="fa fa-spinner fa-spin"></i> Esperando que ingrese un número</p></h2>
+   <h2><p *ngIf="unJuego.numeroSecreto!=0" ><i class="fa fa-spinner fa-spin"></i> Esperando un número...</p></h2>
 
    <h3 [hidden]="!unJuego.gano">Usted adivino el número</h3>
    <h3><p [hidden]="unJuego.gano" class="font-italic"> Usted aún no gano</p> </h3>

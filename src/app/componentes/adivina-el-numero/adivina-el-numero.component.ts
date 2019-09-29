@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
 import { JuegoAdivina} from '../../clases/juego-adivina';
 import { JuegoServiceService} from '../../servicios/juego-service.service';
 
@@ -11,6 +11,7 @@ export class AdivinaElNumeroComponent implements OnInit {
 
 
   unJuego: JuegoAdivina;
+  @Output() 
  enviarJuego: EventEmitter<any>=new EventEmitter<any>();
 
 

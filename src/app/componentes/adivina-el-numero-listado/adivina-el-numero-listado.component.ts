@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Juego} from '../../clases/juego';
+import { JuegoServiceService} from '../../servicios/juego-service.service';
 
 @Component({
   selector: 'app-adivina-el-numero-listado',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdivinaElNumeroListadoComponent implements OnInit {
 
-  constructor() { }
+  public listadoParaCompartir: Array<any>;
+
+  constructor(public servicioJuego: JuegoServiceService) {
+    this.listadoParaCompartir = new Array<any>();
+   }
 
   ngOnInit() {
+    this.listadoParaCompartir=this.servicioJuego.inicializarLista();
+  }
+
+  tomarJuegoTerminado(juego: Juego)
+  {
+    this.listadoParaCompartir.push(juego);
+   // console.info("en app",this.listadoParaCompartir);
+    this.servicioJuego.cargarLista(this.listadoParaCompartir);    
   }
 
 }
