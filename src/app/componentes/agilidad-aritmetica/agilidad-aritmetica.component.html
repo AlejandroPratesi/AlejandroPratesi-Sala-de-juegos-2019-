@@ -1,1 +1,64 @@
-<p>agilidad-aritmetica works!</p>
+<!--The content below is only a placeholder and can be replaced.-->
+<!--app-menu></app-menu-->
+<!-- index.html -->
+
+<body style="background-image: url('/TP_LAV4_2017/assets/imagenes/poker.jpg')">
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+    
+    <div class="alert alert-success" role="alert">
+    
+      <div class="alert alert-dark">
+        <strong>Agilidad</strong> 
+      </div>
+    
+    
+    
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Primer Numero</label>
+      <div class="col-10">
+      
+        <input [(ngModel)]="unJuego.numero1" placeholder="ingrese numero" name="num1" type="text" class="form-control" style="width:100%" readonly/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-search-input" class="col-2 col-form-label">Operador</label>
+      <div class="col-10">
+        <input [(ngModel)]="unJuego.operadorCaracter" placeholder="Operador" name="signo" type="text" class="form-control" style="width:100%" readonly/>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-email-input" class="col-2 col-form-label">Segundo Numero</label>
+      <div class="col-10">
+        <input [(ngModel)]="unJuego.numero2" placeholder="ingrese numero" name="num2" type="text" class="form-control" style="width:100%" readonly/>
+      </div>
+    </div>
+    
+    <div class="form-group row">
+      <label for="example-email-input" class="col-2 col-form-label">Respuesta</label>
+      <div class="col-10">
+       <input [(ngModel)]="unJuego.numeroIngresado" placeholder="ingrese numero" name="numeroIngresado" type="text" class="form-control" style="width:100%"/>
+      </div>
+    </div>
+    
+    <div class="form-group row">
+     
+      <div class="col-12">
+         <!-- <h2 [hidden]="ocultarVerificar" ><button (click)="verificar()" class="btn btn-success btn-lg btn-block">Verificar {{Tiempo}} </button></h2> -->
+      <h2><button (click)="unJuego.Siguiente()" value="SIGUIENTE" name="siguiente" class="btn btn-success btn-lg btn-block">Siguiente </button></h2>
+      </div>
+    </div>
+    <h4>Intento Numero: {{unJuego.ronda}}</h4>
+    
+    <div class="form-group row" *ngIf="unJuego.contador==3">
+      <div class="col-12">
+     <input type="button" class="btn btn-danger btn-lg btn-block" value="Resultados" name="verificar" (click)="verificar()">
+       
+      </div>
+    </div>
+    
+    </div>
+    </div>
+    <div class="col-sm-3"></div>
+    </div>
