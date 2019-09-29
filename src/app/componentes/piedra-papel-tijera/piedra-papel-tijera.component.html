@@ -1,1 +1,57 @@
-<p>piedra-papel-tijera works!</p>
+<div class="card bg-info text-white" align="center">
+    <div class="card-body">
+      <h3>
+        <p class="font-italic font-weight-bold"> Piedra Papel o Tijera</p>
+      </h3>
+    </div>
+  </div>
+  <br>
+  <table border="0" width="60%" height="auto" align="center">
+    <tr>
+      <td>
+              <img src="./assets/imagenes/piedra.jpg" border="1"  width="300px" height="200px" (click)="Piedra()">
+      </td>
+      <td>
+        <img src="./assets/imagenes/papel.jpg" border="1" width="300px" height="200px" (click)="Papel()">
+      </td>
+      <td>
+        <img src="./assets/imagenes/tijera.jpg" border="1" width="300px" height="200px" (click)="Tijera()">
+      </td>
+    </tr>
+  </table>
+  
+  <br>
+  <div *ngIf="juegoPPT.numeroRandom==1" align="center">
+    <img src="./assets/imagenes/piedra.jpg" border="1" width="200px" height="120px">
+  </div>
+  
+  <div *ngIf="juegoPPT.numeroRandom==2" align="center">
+    <img src="./assets/imagenes/papel.jpg" border="1" width="200px" height="120px">
+  </div>
+  
+  <div *ngIf="juegoPPT.numeroRandom==3" align="center">
+    <img src="./assets/imagenes/tijera.jpg" border="1" width="200px" height="120px">
+  </div>
+  <br>
+  
+  <div class="card bg-primary text-white" *ngIf="juegoPPT.resultado=='Gano'" align="center">
+    <div class="card-body">
+      <h3>
+        <p class="font-italic font-weight-bold"> Ganaste</p>
+      </h3>
+    </div>
+  </div>
+  <div class="card bg-danger text-white" *ngIf="juegoPPT.resultado=='Perdio'" align="center">
+    <div class="card-body">
+      <h3>
+        <p class="font-italic font-weight-bold"> Perdiste</p>
+      </h3>
+    </div>
+  </div>
+  <div class="card bg-info text-white" *ngIf="juegoPPT.resultado=='Empato'" align="center">
+    <div class="card-body">
+      <h3>
+        <p class="font-italic font-weight-bold"> Empate</p>
+      </h3>
+    </div>
+  </div>

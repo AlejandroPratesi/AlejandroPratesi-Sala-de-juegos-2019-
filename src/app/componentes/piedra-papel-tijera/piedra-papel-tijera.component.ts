@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { PiedraPapelTijera } from '../../clases/juego-piedra-papel-tijera';
+import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 @Component({
   selector: 'app-piedra-papel-tijera',
@@ -7,7 +9,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PiedraPapelTijeraComponent implements OnInit {
 
-  constructor() { }
+  juegoPPT: PiedraPapelTijera;
+  
+  @Output()
+  enviarJuego:EventEmitter<any>= new EventEmitter<any>();
+
+  constructor(private miServicio?: JuegoServiceService) {
+    this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Anonimo", true);
+   }
+
+   
+   Piedra()
+   {
+     this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Anonimo", true);
+     this.juegoPPT.Piedra();
+     this.juegoPPT.jugador = this.miServicio.retornarUsuario();
+     this.enviarJuego.emit(this.juegoPPT);
+     
+   }
+ 
+   Papel()
+   {
+     this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Anonimo", true);
+     this.juegoPPT.Papel();
+     this.juegoPPT.jugador = this.miServicio.retornarUsuario();
+     this.enviarJuego.emit(this.juegoPPT);
+     
+   }
+ 
+   Tijera()
+   {
+     this.juegoPPT = new PiedraPapelTijera("Piedra, Papel o Tijera", "Anonimo", true);
+     this.juegoPPT.Tijera();
+     this.juegoPPT.jugador = this.miServicio.retornarUsuario();
+     this.enviarJuego.emit(this.juegoPPT);
+     
+   }
+ 
 
   ngOnInit() {
   }
