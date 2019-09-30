@@ -3,7 +3,7 @@ import { JuegoAgilidad } from '../../clases/juego-agilidad'
 import { JuegoServiceService} from '../../servicios/juego-service.service';
 
 import {Subscription} from 'rxjs';
-import { TimerObservable } from 'rxjs/observable/TimerObservable';
+//import { TimerObservable } from 'rxjs/observable/TimerObservable';
 
 @Component({
   selector: 'app-agilidad-aritmetica',

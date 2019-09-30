@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { JuegoServiceService } from '../../servicios/juego-service.service';
 
 import { Subscription } from "rxjs";
-import { TimerObservable } from "rxjs/observable/TimerObservable";
+//import { TimerObservable } from "rxjs/observable/TimerObservable";
 
 @Component({
   selector: 'app-login',
