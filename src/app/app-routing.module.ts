@@ -12,6 +12,7 @@ import { PiedraPapelTijeraListadoComponent } from './componentes/piedra-papel-ti
 import { AnagramaListadoComponent } from './componentes/anagrama-listado/anagrama-listado.component';
 import { AgilidadAritmeticaListadoComponent } from './componentes/agilidad-aritmetica-listado/agilidad-aritmetica-listado.component';
 import { ListadoComponent } from './componentes/listado/listado.component';
+import { MiJuegoListadoComponent } from './componentes/mi-juego-listado/mi-juego-listado.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   [ {path: 'AdivinaListado' , component: AdivinaElNumeroListadoComponent}, 
     {path: 'Listado',component: ListadoComponent },
     {path: 'PPTListado' , component: PiedraPapelTijeraListadoComponent },
+    {path: 'Mijuego' , component: MiJuegoListadoComponent },
      {path: 'Anagrama' , component: AnagramaListadoComponent },
     {path: 'AgilidadListado' , component: AgilidadAritmeticaListadoComponent }]
    

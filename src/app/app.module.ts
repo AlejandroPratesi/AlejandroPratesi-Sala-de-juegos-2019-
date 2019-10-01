@@ -26,6 +26,20 @@ import { ListadoComponent } from './componentes/listado/listado.component';
 import { AyudaComponent } from './componentes/ayuda/ayuda.component';
 
 import { JuegoServiceService } from './servicios/juego-service.service';
+import { MiJuegoComponent } from './componentes/mi-juego/mi-juego.component';
+import { MiJuegoListadoComponent } from './componentes/mi-juego-listado/mi-juego-listado.component';
+import { BestScoreManager} from './app.storage.service';
+
+
+export const EXAMPLE_COMPONENTS = {
+  'autocomplete-display': {
+    title: 'Display value autocomplete',
+    component: HomeComponent,
+    additionalFiles: null,
+    selectorName: null
+  },
+};
+
 
 @NgModule({
   declarations: [
@@ -47,14 +61,16 @@ import { JuegoServiceService } from './servicios/juego-service.service';
     JuegosComponent,
     ListadoDeResultadosComponent,
     ListadoComponent,
-    AyudaComponent
+    AyudaComponent,
+    MiJuegoComponent,
+    MiJuegoListadoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [JuegoServiceService],
+  providers: [JuegoServiceService,BestScoreManager],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
