@@ -16,21 +16,21 @@
     <div class="col-md-3"></div>
   <div class="col-md-6">
 
-  <div class="panel-heading" align="center">
+  <div class="panel-heading" style="text-align: center">
   <h3> Anagrama de animales</h3>
   </div>
-  <div class="panel-body" align="center">
+  <div class="panel-body" style="text-align: center">
 
   <h1>{{miJuego.palabraAJugar}}</h1>
 
-  <input type="text" class="form-control input-sm" name="palabraDelUsuario" [(ngModel)]="miJuego.palabraDelUsuario"><br><br>
+  <input type="text" class="form-control input-sm" name="unaPalabra" [(ngModel)]="miJuego.unaPalabra"><br><br>
 
  <div class="btn-group btn-group-justified">
    <div class="btn-group">
   <button type="button" name="Jugar" (click)="jugar()" value="JUGAR" class="btn btn-success" >Nueva Palabra</button>
    </div>
 <div class="btn-group">
-  <button type="button" name="Verificar" (click)="verificar(miJuego.palabraDelUsuario)" value="VERIFICAR" class="btn btn-primary">Verificar</button>
+  <button type="button" name="Verificar" (click)="verificar(miJuego.unaPalabra)" value="VERIFICAR" class="btn btn-primary">Verificar</button>
 </div>
 <div class="btn-group">
   <button type="button" name="Rendicion" (click)="rendirse()" value="ME RINDO" class="btn btn-danger">Solucion</button>

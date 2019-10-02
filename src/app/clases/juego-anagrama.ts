@@ -4,6 +4,7 @@ export class JuegoAnagrama {
        palabrasOrdenadas: Array<string> = new Array<string>();
        palabraAJugar: string;
        palabraDeUsuario: string = '';
+       unaPalabra: string ='';
        gano: boolean;
        contador: number = 0;
        numeroRandom: number = 0;
