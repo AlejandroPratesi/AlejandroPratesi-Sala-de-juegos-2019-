@@ -1,25 +1,43 @@
 
- <body style="background-image: url('./assets/imagenes/poker.jpg')">
+ <body style="background-image: url('./assets/imagenes/galaga.jpg')">
 
  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#" [routerLink]="['/home']" >Menu principal</a>
+ 
+
+
+  <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" [routerLink]="['/home']" >
+          <i class="fas fa-home"></i>
+          Home</a>
+      
+      </li>
+      <li class="nav-item">
+          <a class="nav-link"> | </a>
+         </li>
+      <li class="nav-item">
+          <button type="button"  [routerLink]="['Listado']" class="btn btn-outline-d ark">
+              <!-- <i class="fab fa-playstation"></i> -->
+              <i class="fas fa-play"></i>
+            Resultados</button>
+         </li>
+  </ul>
+  <!-- 
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
         <a class="nav-link" href="#" ><span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <!-- <a class="nav-link" [routerLink]="['Adivina']">Adivina el numero</a> -->
-        <button type="button"  [routerLink]="['AdivinaListado']" class="btn btn-dark">Adivina el numero</button>
+       <button type="button"  [routerLink]="['AdivinaListado']" class="btn btn-dark">Adivina el numero</button>
       </li>
        <li class="nav-item">
        <a class="nav-link">|</a>
       </li>
       <li class="nav-item" [routerLink]="['AgilidadListado']">
-       <!-- <a class="nav-link" >Agilidad</a> -->
         <button type="button" class="btn btn-success">Agilidad</button>
       </li>
        <li class="nav-item">
@@ -32,14 +50,13 @@
        <a class="nav-link">|</a>
       </li>
        <li class="nav-item" [routerLink]="['PPTListado']">
-      <button type="button" class="btn btn-default">Piedra-Papel-Tijera</button>
+      <button type="button" class="btn btn-success">Piedra-Papel-Tijera</button>
       </li>
       <li class="nav-item">
         <a class="nav-link">|</a>
       </li>
       <li class="nav-item" [routerLink]="['Mijuego']">
-        <!-- <a class="nav-link" >Mi Juego</a> -->
-        <button type="button" class="btn btn-danger">Mi Juego</button>
+       <button type="button" class="btn btn-danger">Mi Juego</button>
       </li>
       <li class="nav-item">
         <a class="nav-link">|</a>
@@ -48,7 +65,7 @@
         <button type="button" class="btn btn-warning">Listado</button>
       </li>
       </ul>
-      </div>
+      </div> -->
 </nav>
 
 <div class="card-group card-inverse card-primary text-center">
@@ -62,7 +79,7 @@
   </div>
   <div class="card" [routerLink]="['AgilidadListado']" style="background-color: darkorange; border-color:white;">
    
-     <img class="card-img-top" src="./assets/imagenes/agilidad.gif" alt="Card image cap">
+     <img class="card-img-top" src="./assets/imagenes/quepaso.gif" alt="Card image cap">
     <div class="card-body">
            <h4 class="card-title">Agilidad</h4>
        <button type="button" class="btn btn-success btn-lg btn-block">Entrar</button>
@@ -85,7 +102,7 @@
     <div class="card-body">
       <h4 class="card-title">Piedra Papel Tijera</h4>
     
-          <button type="button" class="btn btn-default btn-lg btn-block">Entrar</button>
+          <button type="button" class="btn btn-success btn-lg btn-block">Entrar</button>
     </div>
    
   </div>
