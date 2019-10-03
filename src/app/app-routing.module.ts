@@ -13,6 +13,7 @@ import { AnagramaListadoComponent } from './componentes/anagrama-listado/anagram
 import { AgilidadAritmeticaListadoComponent } from './componentes/agilidad-aritmetica-listado/agilidad-aritmetica-listado.component';
 import { ListadoComponent } from './componentes/listado/listado.component';
 import { MiJuegoListadoComponent } from './componentes/mi-juego-listado/mi-juego-listado.component';
+import { TaTeTiListadoComponent } from './componentes/ta-te-ti-listado/ta-te-ti-listado.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   children:
   [ {path: 'AdivinaListado' , component: AdivinaElNumeroListadoComponent}, 
     {path: 'Listado',component: ListadoComponent },
+    {path: 'TaTeTiListado',component: TaTeTiListadoComponent },
     {path: 'PPTListado' , component: PiedraPapelTijeraListadoComponent },
     {path: 'Mijuego' , component: MiJuegoListadoComponent },
      {path: 'Anagrama' , component: AnagramaListadoComponent },

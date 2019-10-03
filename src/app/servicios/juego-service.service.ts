@@ -28,4 +28,14 @@ export class JuegoServiceService {
   public retornarUsuario() {
     return this.unUsuario;
   }
+
+  
+  public cargar(objeto) {
+   /*  return this.miHttp.httpPostP(this.miHttp.api + 'api/resultado/', objeto).subscribe(
+      success => {
+        this.peticion = success;
+      }, error => {
+        console.log(error);
+      }); */
+  }
 }

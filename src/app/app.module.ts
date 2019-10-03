@@ -29,6 +29,8 @@ import { JuegoServiceService } from './servicios/juego-service.service';
 import { MiJuegoComponent } from './componentes/mi-juego/mi-juego.component';
 import { MiJuegoListadoComponent } from './componentes/mi-juego-listado/mi-juego-listado.component';
 import { BestScoreManager} from './app.storage.service';
+import { TaTeTiComponent } from './componentes/ta-te-ti/ta-te-ti.component';
+import { TaTeTiListadoComponent } from './componentes/ta-te-ti-listado/ta-te-ti-listado.component';
 
 
 export const EXAMPLE_COMPONENTS = {
@@ -63,7 +65,9 @@ export const EXAMPLE_COMPONENTS = {
     ListadoComponent,
     AyudaComponent,
     MiJuegoComponent,
-    MiJuegoListadoComponent
+    MiJuegoListadoComponent,
+    TaTeTiComponent,
+    TaTeTiListadoComponent
   ],
   imports: [
     BrowserModule,
